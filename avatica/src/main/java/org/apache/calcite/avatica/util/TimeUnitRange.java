@@ -26,6 +26,8 @@ public enum TimeUnitRange {
   YEAR(TimeUnit.YEAR, null),
   YEAR_TO_MONTH(TimeUnit.YEAR, TimeUnit.MONTH),
   MONTH(TimeUnit.MONTH, null),
+  WEEK(TimeUnit.WEEK, null),
+  WEEKDAY(TimeUnit.WEEKDAY, null),
   DAY(TimeUnit.DAY, null),
   DAY_TO_HOUR(TimeUnit.DAY, TimeUnit.HOUR),
   DAY_TO_MINUTE(TimeUnit.DAY, TimeUnit.MINUTE),

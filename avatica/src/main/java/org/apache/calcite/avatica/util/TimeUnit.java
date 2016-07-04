@@ -27,7 +27,14 @@ public enum TimeUnit {
   DAY(false, '-', DateTimeUtils.MILLIS_PER_DAY, null),
   HOUR(false, ' ', DateTimeUtils.MILLIS_PER_HOUR, BigDecimal.valueOf(24)),
   MINUTE(false, ':', DateTimeUtils.MILLIS_PER_MINUTE, BigDecimal.valueOf(60)),
-  SECOND(false, ':', DateTimeUtils.MILLIS_PER_SECOND, BigDecimal.valueOf(60));
+  SECOND(false, ':', DateTimeUtils.MILLIS_PER_SECOND, BigDecimal.valueOf(60)),
+
+  /** Unlike the other units, MILLISECOND may not be the unit of a SQL interval.
+   * Still, it is convenient to use it internally, when converting to and from
+   * UNIX timestamps. */
+  WEEK(false, ' ', 1, BigDecimal.valueOf(53)),
+  WEEKDAY(false, ' ', 1, BigDecimal.valueOf(7)),
+  MILLISECOND(false, '.', 1, BigDecimal.valueOf(1));
 
   public final boolean yearMonth;
   public final char separator;

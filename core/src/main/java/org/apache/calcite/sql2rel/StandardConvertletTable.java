@@ -537,6 +537,8 @@ public class StandardConvertletTable extends ReflectiveConvertletTable {
     switch (unit) {
     case YEAR:
     case MONTH:
+    case WEEK:
+    case WEEKDAY:
     case DAY:
       switch (sqlTypeName) {
       case INTERVAL_YEAR_MONTH:

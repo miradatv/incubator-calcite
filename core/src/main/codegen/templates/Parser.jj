@@ -3418,6 +3418,14 @@ TimeUnit TimeUnit() :
     {
         return TimeUnit.MONTH;
     }
+    | <WEEK>
+    {
+      return TimeUnit.WEEK;
+    }
+    | <WEEKDAY>
+    {
+      return TimeUnit.WEEKDAY;
+    }
     | <DAY>
     {
         return TimeUnit.DAY;
@@ -5119,6 +5127,8 @@ SqlPostfixOperator PostfixRowOperator() :
     | < VARYING: "VARYING" >
     | < VERSION: "VERSION" >
     | < VIEW: "VIEW" >
+    | < WEEK: "WEEK" >
+    | < WEEKDAY: "WEEKDAY" >
     | < WHEN: "WHEN" >
     | < WHENEVER: "WHENEVER" >
     | < WHERE: "WHERE" >
